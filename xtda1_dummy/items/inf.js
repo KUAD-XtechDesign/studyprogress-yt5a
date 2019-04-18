@@ -4,50 +4,76 @@ timerID = setInterval('room()',100)
 
 function room() {
 
- var canvas = document.getElementById('canvassample');
+ var canvas = document.getElementById('canvas');
  if ( ! canvas || ! canvas.getContext ) { return false; }
 
-
+//canvas width
  if (document.body.clientWidth < document.documentElement.clientHeight) {
-   document.getElementById('canvassample').width = document.body.clientWidth
-   document.getElementById('canvassample').height = document.body.clientWidth
+   document.getElementById('canvas').width = document.body.clientWidth
+   document.getElementById('canvas').height = document.body.clientWidth
  }else{
-  document.getElementById('canvassample').width = document.documentElement.clientHeight
-  document.getElementById('canvassample').height = 	document.documentElement.clientHeight
+  document.getElementById('canvas').width = document.documentElement.clientHeight
+  document.getElementById('canvas').height = 	document.documentElement.clientHeight
  }
 
- canvaswidth = document.getElementById('canvassample').width
-
+ canvaswidth = document.getElementById('canvas').width
  var ctx = canvas.getContext('2d');
+
+
+ //room other line
  ctx.beginPath();
  ctx.strokeRect(0, 0, canvaswidth, canvaswidth);
 
- rl = 1;
+
+ //roomline
+ roompx = canvaswidth/5;
 
  linestep = {
-  x : [0,canvaswidth/5,canvaswidth/5,0],
-  y : [0,canvaswidth/5,canvaswidth*4/5,canvaswidth]
+  x : [0,roompx,roompx,0],
+  y : [0,roompx,roompx*4,canvaswidth]
   }
 
+ rl = 1;
  for (var ii = 0; ii < linestep.x.length-1; ii++) {
   for (var i = 0; i < 2; i++) {
 
   rl = rl * -1;
 
   ctx.beginPath();
-  ctx.moveTo(canvaswidth/2 + (canvaswidth/2 * rl) - linestep.x[0 + ii] * rl,linestep.y[0 + ii]);
-  ctx.lineTo(canvaswidth/2 + (canvaswidth/2 * rl) - linestep.x[1 + ii] * rl,linestep.y[1 + ii]);
+  ctx.moveTo(canvaswidth/2 + (canvaswidth/2 * rl) - linestep.x[0 + ii] * rl ,linestep.y[0 + ii]);
+  ctx.lineTo(canvaswidth/2 + (canvaswidth/2 * rl) - linestep.x[1 + ii] * rl ,linestep.y[1 + ii]);
   ctx.stroke();
   }
  }
 
  ctx.beginPath();
- ctx.moveTo(canvaswidth/5,canvaswidth/5);
- ctx.lineTo(canvaswidth*4/5,canvaswidth/5);
+ ctx.moveTo(roompx,roompx);
+ ctx.lineTo(roompx*4,roompx);
  ctx.stroke();
 
  ctx.beginPath();
- ctx.moveTo(canvaswidth/5,canvaswidth*4/5);
- ctx.lineTo(canvaswidth*4/5,canvaswidth*4/5);
+ ctx.moveTo(roompx,roompx*4);
+ ctx.lineTo(roompx*4,roompx*4);
  ctx.stroke();
+//
+
+//objct
+objectdate = [[2,5,1,2],[1,2,1,1]]
+
+for (var i = 0; i < 2; i++) {
+ redate = objectdate[i]
+ date = {
+ x : redate[0],
+ y : redate[1],
+ w : redate[2],
+ h : redate[3]
+ }
+
+ roompxp = (canvaswidth - canvaswidth*2/5)/5
+ ox = roompx
+ ctx.beginPath();
+ ctx.strokeRect(ox + roompxp * date.x,ox + roompxp * date.y,roompxp * date.w,roompxp * -date.h);
+ }
+
+
 }
