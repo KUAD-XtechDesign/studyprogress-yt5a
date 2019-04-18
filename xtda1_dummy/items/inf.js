@@ -61,7 +61,7 @@ function room() {
 //
 
 //objct
-objectdate = [[2,5,1,2],[2,2,1,1]];
+objectdate = [[2,5,1,2],[3,2,1,1]];
 
 for (var i = 0; i < objectdate.length; i++) {
  redate = objectdate[i]
@@ -78,11 +78,13 @@ for (var i = 0; i < objectdate.length; i++) {
  ctx.strokeRect(roompx + roompxp * date.x,roompx + roompxp * date.y,roompxp * date.w,roompxp * -date.h);
  }
 
+roomwallheight =  (canvaswidth - (canvaswidth - canvaswidth*2/5));
+
  ctx.beginPath();
- ctx.moveTo(roompx,roompx);
- ctx.lineTo(roompx/2,roompx + roompx);
- ctx.moveTo(roompx/2,roompx + roompx);
- ctx.lineTo(roompx/2,roompx + roompx + roompx);
+ ctx.moveTo(roompx/2,roomwallheight/4)
+ ctx.lineTo(roompx/2,roomwallheight/4 + roomwallheight/5*2);
+ ctx.moveTo(roompx/2,roomwallheight/4 + roomwallheight/5*2);
+ ctx.lineTo(roompx,roompx + roompxp);
  ctx.stroke();
 
 }
