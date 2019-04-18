@@ -23,6 +23,9 @@ function room() {
  //room other line
  ctx.beginPath();
  ctx.strokeRect(0, 0, canvaswidth, canvaswidth);
+ ctx.shadowColor="black";
+ ctx.shadowBlur=5;
+ ctx.fill();
 
 
  //roomline
@@ -58,9 +61,9 @@ function room() {
 //
 
 //objct
-objectdate = [[2,5,1,2],[1,2,1,1]]
+objectdate = [[2,5,1,2],[2,2,1,1]];
 
-for (var i = 0; i < 2; i++) {
+for (var i = 0; i < objectdate.length; i++) {
  redate = objectdate[i]
  date = {
  x : redate[0],
@@ -69,11 +72,17 @@ for (var i = 0; i < 2; i++) {
  h : redate[3]
  }
 
- roompxp = (canvaswidth - canvaswidth*2/5)/5
- ox = roompx
+ roompxp = (canvaswidth - canvaswidth*2/5)/5;
+ ox = roompx;
  ctx.beginPath();
- ctx.strokeRect(ox + roompxp * date.x,ox + roompxp * date.y,roompxp * date.w,roompxp * -date.h);
+ ctx.strokeRect(roompx + roompxp * date.x,roompx + roompxp * date.y,roompxp * date.w,roompxp * -date.h);
  }
 
+ ctx.beginPath();
+ ctx.moveTo(roompx,roompx);
+ ctx.lineTo(roompx/2,roompx + roompx);
+ ctx.moveTo(roompx/2,roompx + roompx);
+ ctx.lineTo(roompx/2,roompx + roompx + roompx);
+ ctx.stroke();
 
 }
