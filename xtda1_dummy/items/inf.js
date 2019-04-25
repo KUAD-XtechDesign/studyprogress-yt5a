@@ -29,11 +29,13 @@ function room() {
 
 
  //roomline
- roompx = canvaswidth/5;
+ roomw5 = canvaswidth/5;
+ rooms5 = (canvaswidth - canvaswidth/5*2);
+ roomm5 = (canvaswidth + rooms5)/2;
 
  linestep = {
-  x : [0,roompx,roompx,0],
-  y : [0,roompx,roompx*4,canvaswidth]
+  x : [0,roomw5,roomw5,0],
+  y : [0,roomw5,roomw5*4,canvaswidth]
   }
 
  rl = 1;
@@ -50,18 +52,18 @@ function room() {
  }
 
  ctx.beginPath();
- ctx.moveTo(roompx,roompx);
- ctx.lineTo(roompx*4,roompx);
+ ctx.moveTo(roomw5,roomw5);
+ ctx.lineTo(roomw5*4,roomw5);
  ctx.stroke();
 
  ctx.beginPath();
- ctx.moveTo(roompx,roompx*4);
- ctx.lineTo(roompx*4,roompx*4);
+ ctx.moveTo(roomw5,roomw5*4);
+ ctx.lineTo(roomw5*4,roomw5*4);
  ctx.stroke();
 //
 
 //objct
-objectdate = [[2,5,1,2],[3,2,1,1]];
+objectdate = [[2,3,1,2],[3,2,1,1]];
 
 for (var i = 0; i < objectdate.length; i++) {
  redate = objectdate[i]
@@ -72,19 +74,41 @@ for (var i = 0; i < objectdate.length; i++) {
  h : redate[3]
  }
 
- roompxp = (canvaswidth - canvaswidth*2/5)/5;
- ox = roompx;
  ctx.beginPath();
- ctx.strokeRect(roompx + roompxp * date.x,roompx + roompxp * date.y,roompxp * date.w,roompxp * -date.h);
+ ctx.strokeRect(roomw5 + rooms5/5 * date.x,roomw5 + rooms5/5 * (date.y),rooms5/5 * date.w,rooms5/5 * date.h);
  }
 
-roomwallheight =  (canvaswidth - (canvaswidth - canvaswidth*2/5));
+ roomwallheight =  (canvaswidth - (canvaswidth - canvaswidth*2/5));
 
+ if (date.x = 3) {
  ctx.beginPath();
- ctx.moveTo(roompx/2,roomwallheight/4)
- ctx.lineTo(roompx/2,roomwallheight/4 + roomwallheight/5*2);
- ctx.moveTo(roompx/2,roomwallheight/4 + roomwallheight/5*2);
- ctx.lineTo(roompx,roompx + roompxp);
+ ctx.moveTo(0,roomw5*date.y)
+ ctx.lineTo(0,roomw5*date.h);
+ ctx.moveTo(0,roomw5);
+ ctx.lineTo(roomw5/2,roomwallheight/4 + roomwallheight/5*2);
+ ctx.stroke();
+ }
+
+ if (!date) {
+ ctx.beginPath();
+ ctx.moveTo(roomw5/2,roomwallheight/4)
+ ctx.lineTo(roomw5/2,roomwallheight/4 + roomwallheight/5*2);
+ ctx.moveTo(roomw5/2,roomwallheight/4 + roomwallheight/5*2);
+ ctx.lineTo(roomw5,roomw5 + rooms5/5);
  ctx.stroke();
 
+ ctx.beginPath();
+ ctx.moveTo(0,0)
+ ctx.lineTo(0,roomw5);
+ ctx.moveTo(0,roomw5);
+ ctx.lineTo(roomw5/2,roomwallheight/4 + roomwallheight/5*2);
+ ctx.stroke();
+
+ ctx.beginPath();
+ ctx.moveTo(roomw5/2,roomwallheight/4 + roomwallheight/5*2)
+ ctx.lineTo(roomw5/2,roomwallheight/4 + roomwallheight/5*4);
+ ctx.moveTo(roomw5/2,roomwallheight/4 + roomwallheight/5*4);
+ ctx.lineTo(roomw5,roomw5 + rooms5/5*2);
+ ctx.stroke();
+ }
 }
