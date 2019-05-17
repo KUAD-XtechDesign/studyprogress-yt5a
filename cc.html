@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form name="form1"id="id_form1" action="">
+     <p>
+      <textarea id="tx" name="maintext" rows="30" cols="160" value="">How C#</textarea>
+     </p>
+     <input type="button" value="入力" onclick="onButtonClick()"/>
+    </form>
+    <hr>
+    <div id="table"></div>
+  <script>
+  //新規入力
+  function onButtonClick() {
+  //リセット
+  document.getElementById("table").innerHTML = '';
+  //文章の取得
+  gettx = document.forms.id_form1.tx.value.replace(/\s+/g, "");
+
+  //文中の";"の座標をリスト化して取得。
+  var keyselect = [";","{"];
+  var endkey = /[;]+/g;
+  var result;
+  var endpointlist = [];
+  while (result = endkey.exec(gettx)) {
+   endpointlist.push(result.index);
+  }
+
+  //文中の";"の座標数を取得。
+  var endpoint = (gettx.match( /;/g ) || []).length ;
+
+  //出力結果
+
+  for (var i = 0; i < endpoint; i++) {
+  console.log(endpointlist[i]);
+
+  var translation= document.createElement('p');
+  translation.setAttribute('id','pushtext' + i);
+  table.insertBefore(translation, null);
+  document.getElementById("pushtext" + i).innerHTML = gettx.slice(endpointlist[i-1] + 1,endpointlist[i] + 1);
+
+  console.log(gettx.slice(endpointlist[i-1] + 1,endpointlist[i] + 1));
+  }
+  console.log(endpoint);
+   }
+  </script>
+ </body>
+</html>
