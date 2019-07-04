@@ -29,7 +29,7 @@ secp = sec * pxt;
 var context = canvas.getContext('2d');
 
 //左から20上から40の位置に、幅50高さ100の四角形を描く
-context.fillRect(0,secp,pxl,pxl);
+context.fillRect(0,secp,pxl,pxt);
 context.fillRect(pxl,pxl,pxl,pxl);
 
 //色を指定する
