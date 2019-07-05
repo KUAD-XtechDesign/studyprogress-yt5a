@@ -15,7 +15,7 @@ var context = canvas.getContext('2d');
 //setup
 secp = 0;
 
-timerID = setInterval('gettime()',100);
+timerID = setInterval('gettime()',200);
 
 function gettime()  {
 now = new Date();
@@ -25,7 +25,7 @@ getpx();
  }
 
 function getpx()  {
-secp = sec * pxt;
+secp = sec * pxt - pxt;
 var context = canvas.getContext('2d');
 
 //左から20上から40の位置に、幅50高さ100の四角形を描く
@@ -42,6 +42,6 @@ context.clearRect(0,secp-1, pxl,1);
 //reset
  if (sec == 0) {
  context.clearRect(0,0,pxl*3,wih);
- secp = 0;
+// secp = 0;
  }
 }
