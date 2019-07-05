@@ -1,7 +1,7 @@
 wih = window.innerHeight;
 wiw = window.innerWidth;
 pxl = wih/20;
-pxt = wih/60;
+pxt = wih/59;
 
 document.getElementById("timescase").innerHTML = "<canvas id='canvas1'" +
 "style='position:fixed;right:0;top:0;'" +
