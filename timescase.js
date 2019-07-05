@@ -38,7 +38,6 @@ if( ( sec % 5 ) == 0 ) {
 context.fillStyle = 'rgb(00,00,255)';
 }
 context.fillRect(pxl,secp,pxl,pxt);
-//context.fillRect(pxl,pxl,pxl,pxl);
 
 //色の指定
 //context.strokeStyle = 'rgb(00,00,255)'; //枠線の色は青
@@ -49,7 +48,7 @@ context.clearRect(pxl,secp-1, pxl,1);
 
 if (startset == 0) {
 for (var i = 0; i <= sec; i++) {
-  
+
 context.fillStyle = 'rgb(255,00,00)';
 if( ( i % 5 ) == 0 ) {
 context.fillStyle = 'rgb(00,00,255)';
