@@ -17,6 +17,9 @@ var context = canvas.getContext('2d');
 secp = 0;
 startset = 0;
 
+context.fillRect(0,secp,pxl,wih);
+context.fillRect(pxl*2,secp,pxl,wih);
+
 timerID = setInterval('gettime()',200);
 
 function gettime()  {
@@ -30,7 +33,7 @@ function getpx()  {
 secp = sec * pxt - pxt;
 var context = canvas.getContext('2d');
 
-context.fillRect(0,secp,pxl,pxt);
+context.fillRect(pxl,secp,pxl,pxt);
 //context.fillRect(pxl,pxl,pxl,pxl);
 
 //色の指定
@@ -38,12 +41,12 @@ context.fillRect(0,secp,pxl,pxt);
 //context.fillStyle = 'rgb(255,00,00)'; //塗りつぶしの色は赤
 
 //delete
-context.clearRect(0,secp-1, pxl,1);
+context.clearRect(pxl,secp-1, pxl,1);
 
 if (startset == 0) {
 for (var i = 0; i <= sec; i++) {
-context.fillRect(0,i * pxt - pxt,pxl,pxt);
-context.clearRect(0,i * pxt - pxt -1, pxl,1);
+context.fillRect(pxl,i * pxt - pxt,pxl,pxt);
+context.clearRect(pxl,i * pxt - pxt -1,pxl,1);
 
 }
 console.log("@");
@@ -52,6 +55,8 @@ startset = 1;
 //reset
  if (sec == 0) {
  context.clearRect(0,0,pxl*3,wih);
+ context.fillRect(0,secp,pxl,wih);
+ context.fillRect(pxl*2,secp,pxl,wih);
 // secp = 0;
  }
 }
