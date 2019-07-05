@@ -63,7 +63,7 @@ startset = 1;
 //reset
  if (sec == 0) {
  context.clearRect(0,0,pxl*3,wih);
- context.fillStyle = 'rgb(0,0,0)';
+ context.fillStyle ='rgb(0,0,0)';
  context.fillRect(0,secp,pxl,wih);
  context.fillRect(pxl*2,secp,pxl,wih);
 
