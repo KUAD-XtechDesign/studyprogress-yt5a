@@ -16,6 +16,7 @@ var context = canvas.getContext('2d');
 //secposition
 secp = 0;
 startset = 0;
+//両枠
 context.fillStyle = 'rgb(0,0,0)';
 context.fillRect(0,secp,pxl,wih);
 context.fillRect(pxl*2,secp,pxl,wih);
@@ -33,6 +34,9 @@ function getpx()  {
 secp = sec * pxt - pxt;
 var context = canvas.getContext('2d');
 context.fillStyle = 'rgb(255,00,00)';
+if( ( sec % 5 ) == 0 ) {
+context.fillStyle = 'rgb(00,00,255)';
+}
 context.fillRect(pxl,secp,pxl,pxt);
 //context.fillRect(pxl,pxl,pxl,pxl);
 
@@ -45,6 +49,11 @@ context.clearRect(pxl,secp-1, pxl,1);
 
 if (startset == 0) {
 for (var i = 0; i <= sec; i++) {
+  
+context.fillStyle = 'rgb(255,00,00)';
+if( ( i % 5 ) == 0 ) {
+context.fillStyle = 'rgb(00,00,255)';
+}
 context.fillRect(pxl,i * pxt - pxt,pxl,pxt);
 context.clearRect(pxl,i * pxt - pxt -1,pxl,1);
 
