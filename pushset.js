@@ -2,14 +2,14 @@ var push1 = ["ホーム画面","授業","メモ"];
 var push1link = ["aaaa","abbb","accc"];
 
 var push2 = [
-  ["１","2","3"],
+  ["ホーム","X tech"],
   ["one","two","three","four"],
-  ["一","二"]
+  ["一","二","三"]
 ];
 var push2url = [
-  ["rotate.html","index.html","rotate.html"],
+  ["index.html","https://xtd-shira.github.io/subject_index/"],
   ["rotate.html","index.html","rotate.html","index.html"],
-  ["index.html","index.html"]
+  ["index.html","index.html","index.html"]
 ];
 
 pin = '"';
