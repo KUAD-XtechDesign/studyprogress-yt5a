@@ -8,7 +8,7 @@ var push2 = [
 ];
 var push2url = [
   ["index.html","https://xtd-shira.github.io/subject_index/"],
-  ["rotate.html","index.html","rotate.html","index.html"],
+  ["index.html","index.html","index.html","index.html"],
   ["index.html","index.html","index.html"]
 ];
 
