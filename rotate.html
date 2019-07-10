@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>円運動</title>
+
+<style>
+*{ margin: 0px; padding: 0px; }
+#canvas { background-color: #000; }
+</style>
+<head>
+<body>
+
+<canvas  id="canvas" width="500" height="500">
+ブラウザが対応しておりません。
+</canvas>
+
+<script>
+window.addEventListener('load', draw, false);
+
+function draw(){
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var degree = 0; //角度
+    var radian; //ラジアン
+    bou = 0;
+    ef = 1;
+    var center = {
+      x:canvas.width/2,//　回転の中心x座標
+      y:canvas.height/2//　回転の中心y座標
+    };
+
+    var objr = [200,200,200,200];//オブジェクトの数とそれぞれの半径
+    var gap = 30;//それぞれの回転のズレの大きさ
+
+    //spinlimit = 90;//回転制限
+
+	function loop(){
+    //spinlimit = spinlimit - 1;回転制限
+
+		context.clearRect(0,0, canvas.width,canvas.height);
+    //if (spinlimit >= 0) {
+		degree += 1;//回転速度
+    //}
+    bou += 1 * ef;
+    if (bou > 200||bou < 0) {
+    ef *= -1;
+    }
+    console.log(bou)
+    for (var i = 0; i < objr.length; i++) {
+		radian = (degree + i * gap)* Math.PI/180; //度をラジアンに変換
+    x = (objr[i] - bou) * Math.cos(radian) + center.x;
+		y = (objr[i] - bou) * Math.sin(radian) + center.y;
+
+		context.beginPath();
+		context.fillStyle = 'green';//色の設定
+
+    //図形の形、座標
+    //context.fillRect(x,y,50,50);
+		context.arc(x,y,10,0,Math.PI*2);
+
+		context.fill();
+
+		context.closePath();
+}
+		requestAnimationFrame(loop);
+	}
+  loop()
+}
+
+</script>
+</body>
+</html>

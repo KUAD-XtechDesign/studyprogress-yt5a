@@ -4,7 +4,7 @@ pxl = wih/20;
 pxt = wih/59;
 
 document.getElementById("timescase").innerHTML = "<canvas id='canvas1'" +
-"style='position:fixed;right:0;top:0;'" +
+"style='position:fixed;right:0;top:0;z-index:30;;'" +
 "height='" + wih + "'" +
 "Width='" + pxl + "'" +
 "></canvas>";
@@ -13,16 +13,16 @@ var canvas = document.getElementById('canvas1');
 var context = canvas.getContext('2d');
 
 //setup
-//secposition
 secp = 0;
 startset = 0;
 
+//settime
 timerID = setInterval('gettime()',200);
 
 function gettime()  {
  now = new Date();
  sec = now.getSeconds();
- console.log(sec)
+ //console.log(sec)
  getpx();
 }
 

@@ -1,0 +1,40 @@
+#canvass {
+   position: absolute;
+   /*background-color:yellow;*/
+   z-index:10;
+   top:10vh;
+   left:50px;
+}
+
+#titletop {
+   position: absolute;
+   z-index:20;
+   top:10vh;
+   left:50px;
+   width:500px;
+   height:100px;
+
+   opacity:1;
+   cursor: default;
+   background: linear-gradient(to right,rgba(100,255,255,0.8) 50%,rgba(100,255,255,0));
+   /*border: solid 5px #5f9ea0;*/
+
+}
+
+#titlebottom {
+  height: 100%;
+  /*background: rgba(255,255,255,0.5);*/
+  opacity:0.6;
+  cursor: default;
+  background: linear-gradient(to left,rgba(255,255,255,0.8),rgba(100,255,255,0));
+}
+
+.right-triangle {
+  position:fixed;
+  top:70vh;
+  left:0px;
+  width:0;
+  height:0;
+  border-right:30vh solid transparent;
+  border-bottom:30vh solid #00ced1;
+}
