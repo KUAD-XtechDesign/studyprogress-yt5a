@@ -60,8 +60,9 @@ function getpx()  {
 
    context.fillRect(0,i * pxt - pxt,pxl,pxt);
    context.clearRect(0,i * pxt - pxt -1,pxl,1);
+   }
+   context.clearRect(0,sec * pxt,pxl*3,wih);
   }
-}
 //reset
  if (sec == 0) {
   context.clearRect(0,0,pxl*3,wih);
