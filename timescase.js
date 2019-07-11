@@ -33,6 +33,7 @@ function getpx()  {
 //５の倍数の時に色を変更。
  if( ( sec % 5 ) == 0 ) {
   context.fillStyle = '#00ced1';
+  timeset()
  }
  context.fillRect(0,secp,pxl,pxt);
 
@@ -45,6 +46,11 @@ function getpx()  {
 
 //一回のみ
  if (startset == 0) {
+   timeset()
+   startset = 1;
+  }
+
+  function timeset(){
   for (var i = 0; i <= sec; i++) {
 
    context.fillStyle = '#5f9ea0';
@@ -55,9 +61,7 @@ function getpx()  {
    context.fillRect(0,i * pxt - pxt,pxl,pxt);
    context.clearRect(0,i * pxt - pxt -1,pxl,1);
   }
-  startset = 1;
- }
-
+}
 //reset
  if (sec == 0) {
   context.clearRect(0,0,pxl*3,wih);

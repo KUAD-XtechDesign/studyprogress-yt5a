@@ -32,10 +32,8 @@ start2 = 0;
 if (s2) {
 start2 = s2;
 }
-
-console.log(s2)
-console.log(start2)
-
+//console.log(s2)
+//console.log(start2)
 var left = 100;
 var inner = "";
 for (var i = 0; i < push2[start2].length; i++) {
