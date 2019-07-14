@@ -13,7 +13,8 @@ var push2url = [
 ];
 
 pin = '"';
-xxx = "<div class = 'top'></div>"+"<div class = 'bottom'></div>"
+start2 = 0;
+xxx = "<div class = 'top'></div>"+"<p>" + push2[start2][i] + "</p>" + "<div class = 'bottom'></div>"
 
 
 
@@ -35,12 +36,14 @@ start2 = s2;
 //console.log(s2)
 //console.log(start2)
 var left = 100;
+var top = 300;
 var inner = "";
 for (var i = 0; i < push2[start2].length; i++) {
 inner +=
 "<a  href='" + push2url[start2][i] +
-"' class='button2' style = 'top:300px;left:" + left + "px'>" + "<p>" + push2[start2][i] + "</p>" + xxx + "</a>"
+"' class='button2' style = 'top:" + top + "px;left:" + left + "px'>" + "<div class = 'top'></div>"+"<div class = 'bottom'>"+"<p>" + push2[start2][i] + "</p>" + "</div>" + "</a>"
 left += 200;
+top -= 40;
 }
 document.getElementById("push2").innerHTML = inner;
 }
