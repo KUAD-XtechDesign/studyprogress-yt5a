@@ -1,8 +1,13 @@
+rotateon = 0;
+cheight = window.innerHeight/10*8;
+cwidth = window.innerWidth/10*8;
+
 document.getElementById("mainmonitor").innerHTML = "<canvas id='canvass'" +
 "style='z-index:10;'" +
-"height='" + window.innerHeight/10*8 + "px'" +
-"Width='" + window.innerWidth/10*8 + "px'" +
+"height='" + cheight + "px'" +
+"Width='" + cwidth + "px'" +
 "></canvas>";
+
 
 window.addEventListener('load', draw, false);
 
@@ -22,6 +27,8 @@ function draw(){
     };
     objr = [];//オブジェクトの数とそれぞれの半径
     //ex
+
+
     at = [canvas.height/2,canvas.height,canvas.height*2];
     for (var ii = 0; ii < 3; ii++) {
      for (var i = 0; i < 6; i++) {
@@ -58,7 +65,9 @@ function draw(){
 
     //図形の形、座標
     //context.fillRect(x,y,50,50);
+    if (rotateon == 1) {
 		context.arc(x,y,30,0,Math.PI*2);
+    }
 
 		context.fill();
 
@@ -67,7 +76,7 @@ function draw(){
 		requestAnimationFrame(loop);
 	}
   loop()
-}
+ }
 
 function aaa(){
 color = "rgba(255,255,0,0.2)";

@@ -8,7 +8,7 @@ var push2 = [
 ];
 var push2url = [
   ["index.html","https://xtd-shira.github.io/subject_index/"],
-  ["index.html","index.html","index.html","index.html"],
+  ["study.html","index.html","index.html","index.html"],
   ["index.html","index.html","index.html"]
 ];
 
@@ -42,8 +42,8 @@ for (var i = 0; i < push2[start2].length; i++) {
 inner +=
 "<a  href='" + push2url[start2][i] +
 "' class='button2' style = 'top:" + top + "px;left:" + left + "px'>" + "<div class = 'top'></div>"+"<div class = 'bottom'>"+"<p>" + push2[start2][i] + "</p>" + "</div>" + "</a>"
-left += 200;
-top -= 40;
+left += 150;
+top -= 0;
 }
 document.getElementById("push2").innerHTML = inner;
 }

@@ -68,15 +68,15 @@ left:10%;
 }
 .button2 .bottom {
   position:absolute;
-  top:800px;
-  width: 100px;
+  top:200px;
+  width: 120px;
   height: 100px;
   background:rgba(255,255,0,0.3);
   transition: .5s;
 }
 
-.button2:hover > .bottom{
+/*.button2:hover > .bottom{
 top:60px;
 background-color:#E72458;
 transition: .8s;
-}
+}*/
