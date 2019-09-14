@@ -81,6 +81,7 @@ z-index:1;
 #selectmujic{
 position:relative;
 height:25px;
+background-color:rgb(255,255,254);
 }
 #selectmujic:focus{
 outline:0;

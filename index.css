@@ -98,7 +98,11 @@ animation:bwfont 1.5s 1 forwards;
  /*font-family:serif;*/
  font-weight: 900;
  color:black;
- -webkit-text-stroke: 1px white;
+ /*-webkit-text-stroke: 1px white;*/
+ text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+            -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+            0px 1px 0 #FFF,  0-1px 0 #FFF,
+            -1px 0 0 #FFF, 1px 0 0 #FFF;
  border-image: linear-gradient(to top,gray 50%,white 50%,white 100%) 1/5px 5px 5px 5px;
  border-style: solid;
 
@@ -123,7 +127,8 @@ z-index:2;
 
 color:gray;
 font-family:serif;
--webkit-text-stroke:0px;
+/*-webkit-text-stroke:0px;*/
+text-shadow:none;
 
 border-radius:10px;
 border:solid 5px white;

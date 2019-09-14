@@ -123,7 +123,7 @@ function checkwidth(calltx){
   console.log(document.getElementById('checkwidth').clientWidth)
   var setwidth = document.getElementById('checkwidth').clientWidth;
 
-  document.getElementById("selectmujic").style.width = (setwidth/30*17 + 25) + "px";
+  document.getElementById("selectmujic").style.width = (setwidth/23*13 + 40) + "px";
   document.getElementById('checkwidth').remove()
 }
 
