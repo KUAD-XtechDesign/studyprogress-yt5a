@@ -52,8 +52,8 @@ function frontone(){
 
  //文章
  word = [
-  ["[当WEBページにお越しいただきありがとうございます]","padding-top","100px"],
-  ["[どうぞごゆっくりご覧になってください]","padding-bottom","50px"],
+  ["当WEBページにお越しいただきありがとうございます","padding-top","100px"],
+  ["どうぞごゆっくりご覧になってください","padding-bottom","50px"],
  ];
 
  //出力
