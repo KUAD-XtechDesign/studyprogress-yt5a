@@ -68,7 +68,7 @@ function reyoutube(){
 url[urllength] = url[Math.floor(Math.random() * urllength)];
 
 document.getElementById('media').innerHTML = '<img id="covermujic"' + 'src="picture/mujic.png" alt="">' +
- '<iframe id="you" height="500"name="' + songname[(url.indexOf(spasss))] + '"' +
+ '<iframe id="you" height="500" name="' + songname[(url.indexOf(spasss))] + '"' +
  'src="https://www.youtube.com/embed/' + spasss + '?' +
  'showinfo=0' +
  'loop=1' +
