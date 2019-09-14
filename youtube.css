@@ -74,10 +74,12 @@ position:fixed;
 height:25px;
 top:185px;
 left:180px;
+font-size:20px;
 z-index:1;
 }
 
 #selectmujic{
+position:relative;
 height:25px;
 }
 #selectmujic:focus{
