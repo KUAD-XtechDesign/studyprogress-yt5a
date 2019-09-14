@@ -1,0 +1,100 @@
+#media {
+ position:fixed;
+ right:0;
+ height:50px;
+ width:100px;
+
+ vertical-align: middle;
+ overflow-y:hidden;
+ z-index:1;
+}
+
+#covermujic{
+position:absolute;
+top:calc(0% - 20%);
+left:calc(0% - 20%);
+width:140%;
+height:140%;
+z-index:2;
+pointer-events: none;
+}
+
+
+#you{
+position:relative;
+top:calc(0% - 60px);
+}
+
+#reyoutube{
+ position:fixed;
+ background-color:skyblue;
+ width:100px;
+ height:50px;
+ right:0;
+ top:50px;
+ z-index:1;
+ border:0;
+ border-radius: 0px 0px 100% 100%;
+
+ font-size:20px;
+}
+
+#reyoutube:hover{
+ background-color:cyan;
+}
+#reyoutube:focus{
+outline:0;
+}
+
+#toyoutube{
+ position:fixed;
+ background-color:skyblue;
+ width:100px;
+ height:50px;
+ right:0;
+ top:-30px;
+ z-index:1;
+ border:0;
+ border-radius: 100% 100% 0px 0px;
+
+ font-size:16px;
+}
+
+#toyoutube:hover{
+ background-color:cyan;
+}
+#toyoutube:focus{
+outline:0;
+}
+
+
+
+#select{
+position:fixed;
+height:25px;
+top:185px;
+left:180px;
+z-index:1;
+}
+
+#selectmujic{
+height:25px;
+}
+#selectmujic:focus{
+outline:0;
+}
+#selectmujic option{
+position: relative;
+}
+
+#mujicmode{
+position:relative;
+height:25px;
+background-color: red;
+}
+#mujicmode:focus{
+outline:0;
+}
+#mujicmode option{
+position: relative;
+}

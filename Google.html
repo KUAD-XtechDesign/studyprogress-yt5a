@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function(){
+  $('#google').submit(function(e){
+      var googleto = "";
+
+      if (!$("#googletx").val() == "") {
+       var googleto = googleto + " " + $("#googletx").val();
+      }
+
+      if (!$("#jointo").val() == "") {
+       var googleto = googleto + " " + $("#jointo").val();
+      }
+
+      if (!$("#deleteto").val() == "") {
+       var googleto = googleto + " " + ("-" + $("#deleteto").val());
+      }
+
+      $("#googletx").val(googleto);
+      return;
+  });
+});
+</script>
+  <body>
+    <!-- Google  -->
+    <form method="get" action="http://www.google.co.jp/search" target="_blank" id="google">
+    <input type="text" id="googletx"name="q" size="31" maxlength="255" value="">
+    <button id="googlebutton">送信</button>
+    <input type="hidden" name="hl" value="ja">
+    </form>
+
+    <label for=jointo><input type="checkbox" name="sample">追加単語</label>
+    <input type="text" id="jointo" name= "jointo" size="31" maxlength="255" value=""><br>
+
+    <label for=deleteto><input type="checkbox" name="sample">非検索単語</label>
+    <input type="text" id="deleteto" name= "deleteto" size="31" maxlength="255" value="">
+    <!-- Google -->
+  </body>
+</html>

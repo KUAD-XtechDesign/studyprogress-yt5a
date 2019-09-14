@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <style type="text/css">
+  </style>
+  <script type="text/javascript">
+  var set = -1;
+  var sets = 0;
+  var movex = 0;
+  var movey = 0;
+  // start drag
+  window.onmousedown = function(e) {
+    if (sets==1) {set *= -1;}
+    movex = e.clientX - parseInt(document.getElementById("obj").style.left.replace("px",""));
+    movey = e.clientY - parseInt(document.getElementById("obj").style.top.replace("px",""));
+  }
+  // dræg
+  window.onmousemove = function(e) {
+      if (set == 1) {
+      document.getElementById("obj").style.left = (e.clientX - movex) + "px";
+      document.getElementById("obj").style.top = (e.clientY - movey) + "px";
+    }
+  }
+  function move(){sets=1;console.log("on")}
+  function notmove(){sets=0;console.log("out")}
+  </script>
+  </head>
+  <body>
+    <div id="obj" style="position:absolute;left:20px;top:100px;width:100px;height:100px;background-color:blue;cursor:move;" ></div>
+
+   <script type="text/javascript">
+     document.getElementById("obj").setAttribute("onmouseover","move()");
+     document.getElementById("obj").setAttribute("onmouseout","notmove()");
+   </script>
+  </body>
+</html>

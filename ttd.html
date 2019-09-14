@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+  body {
+    background-color:gray;
+    cursor: none;
+
+  }
+  .button{
+   position:fixed;
+   top:10px;
+   left:10px;
+   background-color:blue;
+  }
+
+  .button:hover{
+   position:fixed;
+   top:10px;
+   left:10px;
+   background-color:black;
+   pointer-events: none;
+  }
+</style>
+
+<script type="text/javascript">
+(function() {
+
+  var canvas;
+  var ctx;
+  var width;
+  var height;
+  var ballX;
+  var ballY;
+  var mouseX;
+  var mouseY;
+
+
+  // 初期化処理
+  function initialize() {
+    canvas = document.getElementById('canvas');
+    if(!canvas && !canvas.getContext) {
+      return false;
+    }
+
+    ctx = canvas.getContext('2d');
+    width = ctx.canvas.width ;
+    height = ctx.canvas.height;
+    diagonal = Math.sqrt((width * width) + (height * height));
+
+    // ボールの初期位置は中心
+    ballX = mouseX = width/2;
+    ballY = mouseY = height/2;
+
+    canvas.addEventListener('mousemove', getMousePosition, false);
+
+    setInterval(drawBalls,10);
+    setInterval(drawBall,10);
+  };
+
+
+  // マウス座標の更新
+  function getMousePosition(e) {
+    var rect = e.target.getBoundingClientRect();
+    mouseX = Math.floor(e.clientX - rect.left);
+    mouseY = Math.floor(e.clientY - rect.top);
+  };
+
+
+  // ボールの描画
+  var hue = 0;
+
+  function drawBalls() {
+    var radius = 30;
+    var delay = 100*100;
+
+    ballX = (mouseX + delay * ballX) / (delay+1);
+    ballY = (mouseY + delay * ballY) / (delay+1);
+
+    wallX = mouseX + delay * ballX;
+    wallY = mouseY + delay * ballY;
+
+    ctx.save();
+    //ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+    ctx.fillRect(0, 0, width, height);
+    ctx.clearRect(0, 0, width, height)
+    // 円の描画設定
+    ctx.beginPath();
+    //ctx.arc(ballX+0, ballY-40, radius,0,2*Math.PI, true);
+    ctx.arc(ballX, ballY, radius-10,0,2*Math.PI, true);
+    ctx.arc(ballX, ballY, radius,0,2*Math.PI, true);
+    //ctx.arc(ballX-30, ballY+30, radius,0,2*Math.PI, true);
+    ctx.closePath();
+
+    //ctx.arc(wallX+diagonal, wallY+diagonal, radius,0,2*Math.PI, true);
+    ctx.closePath();
+
+    // 色設定
+    ctx.strokeStyle = 'rgb(255,00,00)';
+    ctx.fillStyle = 'rgb(255,00,00)';
+    ctx.shadowBlur = 0;
+
+    // 描画実行
+    ctx.stroke();
+    //ctx.fill();
+    ctx.restore();
+  };
+
+  function drawBall() {
+    var radius = 0;
+    var delay = 10;
+
+    ballX = (mouseX + delay * ballX) / (delay+1);
+    ballY = (mouseY + delay * ballY) / (delay+1);
+
+    wallX = mouseX + delay * ballX;
+    wallY = mouseY + delay * ballY;
+
+    ctx.save();
+
+    // 円の描画設定
+    ctx.beginPath();
+    ctx.arc(ballX+0, ballY+100, radius,0,2*Math.PI, true);
+    ctx.arc(ballX+80, ballY-40, radius,0,2*Math.PI, true);
+    ctx.arc(ballX-80, ballY-40, radius,0,2*Math.PI, true);
+    //ctx.arc(ballX-80, ballY+80, radius,0,2*Math.PI, true);
+    ctx.closePath();
+
+  //  ctx.arc(wallX+diagonal, wallY+diagonal, radius,0,2*Math.PI, true);
+    ctx.closePath();
+
+    // 色設定
+    ctx.strokeStyle = 'rgb(255,00,00)';
+    ctx.fillStyle = 'rgb(255,00,00)';
+    ctx.shadowBlur = 0;
+
+    // 描画実行
+    ctx.stroke();
+    //ctx.fill();
+    ctx.restore();
+  };
+
+  // 初期化イベント
+  window.addEventListener('load', initialize, false);
+
+} ) ();
+</script>
+
+</head>
+<body>
+<canvas id='canvas' width=500 height=500></canvas>
+<div class="button" style="position:fixed;">ああああ</div>
+</body>
+</html>

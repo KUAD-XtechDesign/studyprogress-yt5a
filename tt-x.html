@@ -4,8 +4,28 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <style type="text/css">
+   input[type=checkbox]{
+    position:fixed;
+    width:100px;
+    display: none;
+   }
+   .label{
+    position:fixed;
+    width:100px;
+   }
+   #box{
+     position:relative;
+     top:100px;
+     left:200px;
+   }
+  </style>
   <body>
-    <div id="box" style="height: 100px; overflow: auto"></div>
+    <form name="form1">
+    <input type="checkbox" name="button" id="button" value="りんご">
+    <label for="button" class="label">りんご</label>
+    </form>
+    <div id="box"style="height:auto;width:100px;overflow: auto"></div>
 
  <script type="text/javascript">
      function DelayLoad( box, elem, callback )
@@ -55,15 +75,15 @@
          }
      }
 
-     //
+     //エレメント
+     setbox = ["a","ab","ac","ad",]
      var box = document.getElementById( 'box' );
 
      var list = document.createElement( 'ol' );
      box.appendChild( list );
 
-     function sss(){
-     for( var i = 0; i < 1; i++ )
-     {
+     function read(){
+     if (document.form1.button.checked) {for( var i = 0; i < 1; i++ ){
          var li = document.createElement( 'li' );
          li.innerHTML = i+1;
          list.appendChild( li );
@@ -72,11 +92,13 @@
          DelayLoad( box, li, function( elem )
              {
                  // 1000ミリ秒後に、渡された要素内に'ok'と表示
-                 window.setTimeout( function() { elem.innerHTML = Math.floor( Math.random()*100); }, 1000 );
+                 window.setTimeout( function() { elem.innerHTML = setbox[i]; }, 1000 );
              } );
      }
-   }
-     //setInterval("sss()",100);
+    scrollTo(0,box.clientHeight);
+     }
+    }
+    setInterval("read()",500);
  </script>
   </body>
 </html>

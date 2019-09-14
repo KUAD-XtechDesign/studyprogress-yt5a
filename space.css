@@ -1,5 +1,185 @@
+
+.header{
+background-color:gray;
+}
+
+.header h1{
+color:black;
+}
+
 #main {
-width:100px;
-height:100px;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
 background-color:black;
+}
+
+#myProgress::after  {
+  content: attr(data-foo);
+}
+.menus {
+  position:relative;
+  width:140px;
+  height:60px;
+  float:left;
+  margin:2px;
+  opacity: 0;
+  background-color:gray;
+}
+
+
+
+
+
+.header {
+  position: fixed;
+  width: 0%;
+  margin-left: 100%;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  opacity:0;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    position:relative;
+    margin-left: 100%;
+    opacity:0;
+    width: 20%;
+  }
+
+  50% {
+    position:relative;
+  }
+
+  to {
+    position:relative;
+    margin-left: 0%;
+    opacity:1;
+    width: 50%;
+  }
+}
+
+
+
+
+
+
+
+.circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 120px;
+    height: 120px;
+    background: #999;
+    transform-origin: right 60px;
+    z-index: 2;
+    animation: rotate-circle-left 2s linear forwards;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 120px;
+    height: 120px;
+    background: #999;
+    transform-origin: left 60px;
+    z-index: 3;
+    animation: rotate-circle-right 2s linear forwards;
+}
+
+.circle .circle-inner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 62px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+@keyframes rotate-circle-right {
+    0%   {
+        transform: rotate(0deg);
+        background: #999;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #999;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background: #333;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: #333;
+    }
+}
+
+@keyframes rotate-circle-left {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+
+
+
+
+.menus:nth-child(1) {
+  -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+  animation: example 0.8s ease 0.2s 1 forwards;
+}
+
+.menus:nth-child(2) {
+  -webkit-animation: example 0.5s ease 1s 1 forwards;
+  animation: example 0.8s ease 0.4s 1 forwards;
+}
+
+.menus:nth-child(3) {
+  -webkit-animation: example 0.5s ease 1.5s 1 forwards;
+  animation: example 0.8s ease 0.6s 1 forwards;
+}
+
+.menus:nth-child(4) {
+  -webkit-animation: example 0.5s ease 2s 1 forwards;
+  animation: example 0.8s ease 0.8s 1 forwards;
+}
+
+.menus:nth-child(5) {
+  -webkit-animation: example 0.5s ease 2.5s 1 forwards;
+  animation: example 0.8s ease 1.0s 1 forwards;
+}
+
+.menus:nth-child(6) {
+  -webkit-animation: example 0.5s ease 3s 1 forwards;
+  animation: example 0.8s ease 1.2s 1 forwards;
+}
+
+
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
 }
