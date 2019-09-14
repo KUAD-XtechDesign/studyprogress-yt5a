@@ -150,7 +150,8 @@ function mujicdate(num){
   //3
   ["UIYUL_ixE4k","2fOmk6pUob4","9Y9H_wFhMeg",
    "bV0D38nFUhU","BPcqAFjtM8Q","iPXxrYcg_GA",
-   "UfrMELcvi8k","Gi4RXuH2hj4","jdLVqyXuU3o"]
+   "UfrMELcvi8k","Gi4RXuH2hj4","jdLVqyXuU3o",
+   "8JVnSfrqj0w"]
  ];
  var songnames = [
   //1
@@ -172,7 +173,8 @@ function mujicdate(num){
   //3
    ["Heaven's Place","Gentleman","星巡りの詩",
     "Because","The Sore Feet Song","未来予報",
-    "another dawn","時空のたもと","Speedracer"]
+    "another dawn","時空のたもと","Speedracer",
+    "Key To My Heart"]
   ];
  var url = urls[num]
  var songname = songnames[num]
