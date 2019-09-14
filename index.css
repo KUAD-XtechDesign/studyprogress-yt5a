@@ -66,9 +66,28 @@ content:"\A to enter…?";
 white-space: pre;
 animation:bwfont 1.5s 1 forwards;
 }
+
+#maintag .tagbg{
+background: radial-gradient(circle, white, red 15px, black 25px);
+animation:pulsation 1.5s ease infinite;
+}
 @keyframes bwfont {
   0% {color:rgba(255,255,255,0)}
   to {color:rgba(255,255,255,1)}
+}
+
+@keyframes pulsation{
+  0% {background: radial-gradient(circle, white, red 15px, black 25px);}
+  10% {background: radial-gradient(circle, white, red 15.5px, black 25.5px);}
+  20% {background: radial-gradient(circle, white, red 16px, black 26px);}
+  30% {background: radial-gradient(circle, white, red 16.5px, black 26.5px);}
+  40% {background: radial-gradient(circle, white, red 17px, black 27px);}
+  50% {background: radial-gradient(circle, white, red 17.5px, black 27.5px);}
+  60% {background: radial-gradient(circle, white, red 17px, black 27px);}
+  70% {background: radial-gradient(circle, white, red 16.5px, black 26.5px);}
+  80% {background: radial-gradient(circle, white, red 16px, black 26px);}
+  90% {background: radial-gradient(circle, white, red 15.5px, black 25.5px);}
+  to {background: radial-gradient(circle, white, red 15px, black 25px);}
 }
 
 #maintag div:nth-of-type(1):before {animation-delay:0s;}

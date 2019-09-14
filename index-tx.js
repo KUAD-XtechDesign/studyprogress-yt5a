@@ -42,8 +42,8 @@ function pagetx() {
 
  var startmenu = document.getElementById('maintag').children[0];
  var menuname = getelement(startmenu,"name");
- startmenu.setAttribute("style",
- "background: radial-gradient(circle, white, red 15px, black 25px);")
+ startmenu.setAttribute("class","tagbg");
+ //startmenu.setAttribute("style","background: radial-gradient(circle, white, red 15px, black 25px);")
  startmenu.style.backgroundColor = "gray";
  startmenu.innerHTML = "[" + menuname + "]"//brow
 
@@ -66,13 +66,13 @@ var thisvalue = function (list) {
   txlength[i].style.color = "rgba(255,255,255,1)";
   txlength[i].style.backgroundColor = "black";
   txlength[i].setAttribute("style","background:black")
+  txlength[i].removeAttribute("class");
   //front.setAttribute("value",i);
  }
 
  //menu.style
  list.style.color = "rgba(255,255,255,1)";
- list.setAttribute("style",
- "background: radial-gradient(circle, white, red 15px, black 25px);")
+ list.setAttribute("class","tagbg");
  //list.style.backgroundColor = "gray";
  var menuname = getelement(list,"name")
 
