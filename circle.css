@@ -1,7 +1,6 @@
 
 #circle {
     position:fixed;
-    transition:0.1s;
     width: 180px;
     height: 180px;
     background: #333;
