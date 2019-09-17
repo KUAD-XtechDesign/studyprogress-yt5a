@@ -7,6 +7,7 @@ songname = s;
 mujicact = 0;
 thismode = ["Cool","Hot","Sour"]
 modecolor = ["skyblue","red","yellow"]
+freeback = ["rBoA9cHG8z8"]
 
 function youtubestart(){
 console.log(url+","+songname)
@@ -81,6 +82,12 @@ document.getElementById('media').innerHTML = '<img id="covermujic"' + 'src="pict
  document.getElementById('selectmujic').options[spass].selected = true;
 
 document.getElementById('fronts-back-set').innerHTML = '<img src="http://img.youtube.com/vi/' + spasss + '/mqdefault.jpg" id=fronts-back>';
+console.log(spasss)
+for (var i = 0; i < freeback.length; i++) {
+ if (spasss == freeback[i]) {
+  document.getElementById('fronts-back-set').innerHTML = '<img src="' + freebackurl() + '" id=fronts-back>';
+ }
+}
 
   checkwidth(spass)
 }
@@ -152,7 +159,7 @@ function mujicdate(num){
   ["UIYUL_ixE4k","2fOmk6pUob4","9Y9H_wFhMeg",
    "bV0D38nFUhU","BPcqAFjtM8Q","iPXxrYcg_GA",
    "UfrMELcvi8k","Gi4RXuH2hj4","jdLVqyXuU3o",
-   "8JVnSfrqj0w"]
+   "8JVnSfrqj0w","rBoA9cHG8z8"]
  ];
  var songnames = [
   //1
@@ -176,8 +183,9 @@ function mujicdate(num){
    ["Heaven's Place","Gentleman","星巡りの詩",
     "Because","The Sore Feet Song","未来予報",
     "another dawn","時空のたもと","Speedracer",
-    "Key To My Heart"]
+    "Key To My Heart","VON"]
   ];
+
  var url = urls[num]
  var songname = songnames[num]
  return[url,songname]
@@ -188,4 +196,12 @@ url = call1;
 songname = call2;
 urllength = url.length;
 youtubestart()
+}
+
+function freebackurl(){
+var url =["https://img.gifmagazine.net/gifmagazine/images/3633173/original.gif",
+          "https://img.gifmagazine.net/gifmagazine/images/3106894/original.gif",
+          "https://img.gifmagazine.net/gifmagazine/images/940696/original.gif"]
+var length = Math.floor(Math.random()*url.length);
+return url[length];
 }
