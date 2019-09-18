@@ -83,6 +83,7 @@ document.getElementById('media').innerHTML = '<img id="covermujic"' + 'src="pict
 
 document.getElementById('fronts-back-set').innerHTML = '<img src="http://img.youtube.com/vi/' + spasss + '/mqdefault.jpg" id=fronts-back>';
 console.log(spasss)
+//back-free-img
 for (var i = 0; i < freeback.length; i++) {
  if (spasss == freeback[i]) {
   document.getElementById('fronts-back-set').innerHTML = '<img src="' + freebackurl(thismode.indexOf(document.getElementById("mujicmode").value)) + '" id=fronts-back>';
@@ -201,11 +202,11 @@ youtubestart()
 }
 
 function freebackurl(num){
-var url =[
+ var url =[
          //cool
          ["https://img.gifmagazine.net/gifmagazine/images/1266140/original.gif",
           "https://img.gifmagazine.net/gifmagazine/images/2623591/original.gif",
-          "https://img.gifmagazine.net/gifmagazine/images/3900086/original.gif"],
+          "https://img.gifmagazine.net/gifmagazine/images/1280207/original.gif"],
          //Hot
          ["https://img.gifmagazine.net/gifmagazine/images/3015626/original.gif",
           "https://img.gifmagazine.net/gifmagazine/images/3016474/original.gif",
@@ -215,7 +216,7 @@ var url =[
           "https://img.gifmagazine.net/gifmagazine/images/3106894/original.gif",
           "https://img.gifmagazine.net/gifmagazine/images/87697/original.gif"],
          ]
-var select = url[num]
-var length = Math.floor(Math.random() * select.length);
-return url[num][length];
+ var select = url[num]
+ var length = Math.floor(Math.random() * select.length);
+ return url[num][length];
 }
