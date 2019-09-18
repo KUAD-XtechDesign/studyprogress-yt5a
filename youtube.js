@@ -7,7 +7,7 @@ songname = s;
 mujicact = 0;
 thismode = ["Cool","Hot","Sour"]
 modecolor = ["skyblue","red","yellow"]
-freeback = ["rBoA9cHG8z8"]
+freeback = ["rBoA9cHG8z8","ejTgl3cCyDo"]
 
 function youtubestart(){
 console.log(url+","+songname)
@@ -85,7 +85,7 @@ document.getElementById('fronts-back-set').innerHTML = '<img src="http://img.you
 console.log(spasss)
 for (var i = 0; i < freeback.length; i++) {
  if (spasss == freeback[i]) {
-  document.getElementById('fronts-back-set').innerHTML = '<img src="' + freebackurl() + '" id=fronts-back>';
+  document.getElementById('fronts-back-set').innerHTML = '<img src="' + freebackurl(thismode.indexOf(document.getElementById("mujicmode").value)) + '" id=fronts-back>';
  }
 }
 
@@ -154,7 +154,7 @@ function mujicdate(num){
    "Fc2t7R4lIvo","S39DPu7oIx8","Ic1hxXrhEKU",
    "l-hUsYmjDZ4","KtSpk2pMZrs","cD8l-eCFwXs",
    "_za61uzOmnE","sKh006SYF2c","6kcsqNFnccY",
-   "eB6GytZ9c1A"],
+   "eB6GytZ9c1A","ejTgl3cCyDo"],
   //3
   ["UIYUL_ixE4k","2fOmk6pUob4","9Y9H_wFhMeg",
    "bV0D38nFUhU","BPcqAFjtM8Q","iPXxrYcg_GA",
@@ -178,7 +178,7 @@ function mujicdate(num){
    "Dille","To Be More","THE DEEP STRIKER",
    "99 Glooms","115","Festivo",
    "Decisive Battle","Bondage head","From Shadows",
-   "Assign Monk"],
+   "Assign Monk","Fly Away"],
   //3
    ["Heaven's Place","Gentleman","星巡りの詩",
     "Because","The Sore Feet Song","未来予報",
@@ -198,10 +198,22 @@ urllength = url.length;
 youtubestart()
 }
 
-function freebackurl(){
-var url =["https://img.gifmagazine.net/gifmagazine/images/3633173/original.gif",
+function freebackurl(num){
+var url =[
+         //cool
+         ["https://img.gifmagazine.net/gifmagazine/images/3633173/original.gif",
           "https://img.gifmagazine.net/gifmagazine/images/3106894/original.gif",
-          "https://img.gifmagazine.net/gifmagazine/images/87697/original.gif"]
-var length = Math.floor(Math.random()*url.length);
-return url[length];
+          "https://img.gifmagazine.net/gifmagazine/images/87697/original.gif"],
+         //Hot
+         ["https://img.gifmagazine.net/gifmagazine/images/3015626/original.gif",
+          "https://img.gifmagazine.net/gifmagazine/images/3016474/original.gif",
+          "https://img.gifmagazine.net/gifmagazine/images/2993272/original.gif"],
+         //Sour
+         ["https://img.gifmagazine.net/gifmagazine/images/3633173/original.gif",
+          "https://img.gifmagazine.net/gifmagazine/images/3106894/original.gif",
+          "https://img.gifmagazine.net/gifmagazine/images/87697/original.gif"],
+         ]
+var select = url[num]
+var length = Math.floor(Math.random() * select.length);
+return url[num][length];
 }
