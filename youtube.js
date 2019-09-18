@@ -210,7 +210,7 @@ function freebackurl(num){
          //Hot
          ["https://img.gifmagazine.net/gifmagazine/images/3015626/original.gif",
           "https://img.gifmagazine.net/gifmagazine/images/3016474/original.gif",
-          "https://img.gifmagazine.net/gifmagazine/images/2993272/original.gif"],
+          "https://img.gifmagazine.net/gifmagazine/images/3299019/original.gif"],
          //Sour
          ["https://img.gifmagazine.net/gifmagazine/images/3633173/original.gif",
           "https://img.gifmagazine.net/gifmagazine/images/3106894/original.gif",
