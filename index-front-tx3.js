@@ -32,7 +32,7 @@ function fourfront(callnumber){
    word:
    [["","div"],
     ["大阪府高槻市","div"],
-    ["大阪府市茨城市、摂津市","div"],
+    ["大阪府茨城市、摂津市","div"],
     ["準備中","div"]],
   },
 
