@@ -32,7 +32,7 @@ function fourfront(callnumber){
    word:
    [["","div"],
     ["大阪府高槻市","div"],
-    ["準備中","div"],
+    ["大阪府市茨城市、摂津市","div"],
     ["準備中","div"]],
   },
 
@@ -92,7 +92,16 @@ function fourfront(callnumber){
     ["その為、在庫状況と客の購買のデータなどから細かくレイアウトを変えているのでは",""],
     ["ないかと考える。",""]],
   //info-2
-   [["info2",""]],
+   [["　",""],
+    ["店舗1","width","auto","height","40vh","font-style","oblique"].concat(frontimg("picture/bookstore4.jpg")),
+    ["店舗名:お宝家 茨木店",""],
+    ["住所:〒567-0031 大阪府茨木市春日５丁目５−３４",""],
+    ["最寄りの駅:JR京都線　茨木駅　徒歩約17分",""],
+    ["　",""],
+    ["店舗2","width","auto","height","40vh","font-style","oblique"].concat(frontimg("picture/bookstore5.jpg")),
+    ["店舗名:古本市場千里丘店",""],
+    ["住所:〒566-0001 大阪府摂津市千里丘５丁目７−３",""],
+    ["最寄りの駅:阪急京都線　摂津市駅　徒歩約14分",""]],
   //info-3
    [["info3",""]],
 
