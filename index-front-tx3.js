@@ -23,8 +23,6 @@ function fourfront(callnumber){
  drag.setAttribute("onclick","dragon()");
  document.body.appendChild(drag)
 
- part = callnumber;
-
  //一列約41文字、四列まで
  var chatbar=[
  //chat1

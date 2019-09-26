@@ -23,27 +23,26 @@ function threefront(callnumber){
  drag.setAttribute("onclick","dragon()");
  document.body.appendChild(drag)
 
- part = callnumber;
-
  //一列約41文字、四列まで
  var chatbar=[
  //chat1
-   {
-   word:
-   [["準備中","div"],
-    ["準備中","div"],
+   {word:
+   [["","div"],
+    ["クロステックデザイン応用3","div"],
+    ["設計演習2","div"],
     ["準備中","div"],
     ["準備中","div"],
     ["準備中","div"],
     ["準備中","div"]],
-  },
+   },
 
  ];
 
  word =[
+   [["授業ノート",""]],
   //["テキスト","属性","値"]
   //info-1
-   [["info1",""]],
+   [["・9月25日　大阪市立大学杉本町にて",""]],
   //info-2
    [["info2",""]],
   //info-3
