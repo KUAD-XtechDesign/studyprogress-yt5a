@@ -106,14 +106,17 @@ console.log(part);
 
 //chatbar文章
  for (var i = 0; i < chatbar[callnumber].word.length; i++) {
-  var front = document.createElement("div");
+  var front = document.createElement(chatbar[callnumber].word[i][1]);
   front.innerHTML = chatbar[callnumber].word[i][0];
   front.setAttribute("name",(i + 1) + "番目");
   document.getElementById("chatbar").appendChild(front);
  }
 
  for (var i = 0; i < chatbar[callnumber].word.length; i++) {
- document.getElementById('chatbar').children[i].setAttribute("onclick","chatfront1(" + (part + i) + ");waves()");
+  document.getElementById('chatbar').children[i].setAttribute("onclick","chatfront1(" + (part + i) + ");waves()");
+  if ((document.getElementById('chatbar').children[i][2] != null) == true) {
+   document.getElementById('chatbar').children[i].setAttribute("onclick","");
+  }
  }
 }
 
