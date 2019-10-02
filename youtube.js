@@ -5,8 +5,8 @@ urllength = url.length;
 songname = s;
 
 mujicact = 0;
-thismode = ["Cool","Hot","Sour"]
-modecolor = ["skyblue","red","yellow"]
+thismode = ["Cool","Hot","Sour","Machine"]
+modecolor = ["skyblue","red","yellow","gray"]
 freeback = ["rBoA9cHG8z8","ejTgl3cCyDo","0PW5ZrZ3JCw"]
 
 function youtubestart(){
@@ -162,8 +162,11 @@ function mujicdate(num){
   ["UIYUL_ixE4k","2fOmk6pUob4","9Y9H_wFhMeg",
    "bV0D38nFUhU","BPcqAFjtM8Q","iPXxrYcg_GA",
    "UfrMELcvi8k","Gi4RXuH2hj4","jdLVqyXuU3o",
-   "8JVnSfrqj0w","rBoA9cHG8z8","RWX8NRIOf64"]
- ];
+   "8JVnSfrqj0w","rBoA9cHG8z8","RWX8NRIOf64"],
+  //4
+  ["-fz_cIXi8OY","2k4Te7jmwLY","oYVLIB2Nnic",
+   "jQmYZWjLwzw","Y6ljFaKRTrI","wKCAgoV8RPg",
+   "QHwaJVLtQrM"]];
  var songnames = [
   //1
   ["bone","冬の踊り子","Rainy Waltz",
@@ -188,8 +191,11 @@ function mujicdate(num){
    ["Heaven's Place","Gentleman","星巡りの詩",
     "Because","The Sore Feet Song","未来予報",
     "another dawn","時空のたもと","Speedracer",
-    "Key To My Heart","VON","Opium"]
-  ];
+    "Key To My Heart","VON","Opium"],
+  //4
+   ["paranoia","弾けないギターを片手に。",'塵塵呪詛 "Chiri chiri juso"',
+    "Alice in 冷凍庫","'Still Alive'","HeavenZ-ArmZ",
+    "0259 in my room"]];
 
  var url = urls[num]
  var songname = songnames[num]
