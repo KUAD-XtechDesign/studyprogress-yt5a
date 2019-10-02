@@ -156,7 +156,8 @@ function mujicdate(num){
    "Fc2t7R4lIvo","S39DPu7oIx8","Ic1hxXrhEKU",
    "l-hUsYmjDZ4","KtSpk2pMZrs","cD8l-eCFwXs",
    "_za61uzOmnE","sKh006SYF2c","6kcsqNFnccY",
-   "eB6GytZ9c1A","ejTgl3cCyDo","0xLpWQ0us54"],
+   "eB6GytZ9c1A","ejTgl3cCyDo","0xLpWQ0us54",
+   "4-BamISde_M"],
   //3
   ["UIYUL_ixE4k","2fOmk6pUob4","9Y9H_wFhMeg",
    "bV0D38nFUhU","BPcqAFjtM8Q","iPXxrYcg_GA",
@@ -181,7 +182,8 @@ function mujicdate(num){
    "Dille","To Be More","THE DEEP STRIKER",
    "99 Glooms","115","Festivo",
    "Decisive Battle","Bondage head","From Shadows",
-   "Assign Monk","Fly Away","Twister (Kingdom Remix)"],
+   "Assign Monk","Fly Away","Twister (Kingdom Remix)",
+   "shining"],
   //3
    ["Heaven's Place","Gentleman","星巡りの詩",
     "Because","The Sore Feet Song","未来予報",
