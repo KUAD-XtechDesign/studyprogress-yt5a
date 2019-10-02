@@ -42,9 +42,12 @@ function threefront(callnumber){
    [["授業ノート",""]],
   //["テキスト","属性","値"]
   //info-1
-   [["・9月25日　大阪市立大学杉本町にて",""]],
+   [["・9月25日　大阪市立大学杉本町にて",""],
+    [" ","width","50vh","height","40vh","font-style","oblique","float","left"].concat(frontimg("study/study1.jpg")),
+    [" ","width","50vh","height","40vh","font-style","oblique","float","left"].concat(frontimg("study/study2.jpg"))],
   //info-2
-   [["info2",""]],
+   [["・9月26日~10月2日　スケボー構想",""],
+    [" ","width","auto","height","40vh","font-style","oblique"].concat(frontimg("study/study3.jpg"))],
   //info-3
    [["info3",""]],
   //info-1
