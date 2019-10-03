@@ -165,7 +165,8 @@ function mujicdate(num){
    "8JVnSfrqj0w","rBoA9cHG8z8","RWX8NRIOf64"],
   //4
   ["-fz_cIXi8OY","2k4Te7jmwLY","jQmYZWjLwzw",
-   "Y6ljFaKRTrI","wKCAgoV8RPg","QHwaJVLtQrM"]];
+   "Y6ljFaKRTrI","wKCAgoV8RPg","QHwaJVLtQrM",
+   "2msp_bmAtCk","QHkbU3e-tIw"]];
  var songnames = [
   //1
   ["bone","冬の踊り子","Rainy Waltz",
@@ -193,7 +194,8 @@ function mujicdate(num){
     "Key To My Heart","VON","Opium"],
   //4
    ["paranoia","弾けないギターを片手に。","Alice in 冷凍庫",
-   "'Still Alive'","HeavenZ-ArmZ","0259 in my room"]];
+    "'Still Alive'","HeavenZ-ArmZ","0259 in my room",
+    "Kidz","月光"]];
 
  var url = urls[num]
  var songname = songnames[num]
