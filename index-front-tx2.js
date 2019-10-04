@@ -50,14 +50,14 @@ function threefront(callnumber){
     [" ","width","auto","height","40vh","font-style","oblique"].concat(frontimg("study/study3.jpg"))],
   //info-3
    [["info3",""]],
-  //info-1
+  //info-4
    [["10月3日　構想日",""],
     ["現段階でのイメージとしては「敷居の低いゲーム作成キット」。",""],
     ["要素としては六角柱を使って空間を作る。",""],
   　["しばらくはUnityの学習をする。",""],],
-  //info-2
+  //info-5
    [["info5",""]],
-  //info-3
+  //info-6
    [["info6",""]],
 
   ];
