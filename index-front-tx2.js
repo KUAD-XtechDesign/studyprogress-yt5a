@@ -30,9 +30,9 @@ function threefront(callnumber){
    [["","div"],
     ["クロステックデザイン応用3","div"],
     ["設計演習2","div"],
+    ["ソフトウェア・ネットワーク応用2","div"],
     ["プレゼンテーション演習3","div"],
     ["スタートアップ演習2","div"],
-    ["準備中","div"],
     ["準備中","div"]],
    },
 
@@ -49,14 +49,17 @@ function threefront(callnumber){
    [["・9月26日~10月2日　スケボー構想",""],
     [" ","width","auto","height","40vh","font-style","oblique"].concat(frontimg("study/study3.jpg"))],
   //info-3
-   [["info3",""]],
+   [["・9月27日 バックエンドとサイトの構想",""],
+    ["XDで作成","width","auto","height","40vh","font-style","oblique"].concat(frontimg("study/study4.png")),
+    ["・10月4日 前回の続きとJSONの勉強",""],
+    ["https://jsonlint.com　JSON構文作成サイト",""]],
   //info-4
+   [["info4",""]],
+  //info-5
    [["10月3日　構想日",""],
     ["現段階でのイメージとしては「敷居の低いゲーム作成キット」。",""],
     ["要素としては六角柱を使って空間を作る。",""],
-  　["しばらくはUnityの学習をする。",""],],
-  //info-5
-   [["info5",""]],
+  　["しばらくはUnityの学習をする。",""]],
   //info-6
    [["info6",""]],
 
