@@ -162,7 +162,8 @@ function mujicdate(num){
   ["UIYUL_ixE4k","2fOmk6pUob4","9Y9H_wFhMeg",
    "bV0D38nFUhU","BPcqAFjtM8Q","iPXxrYcg_GA",
    "UfrMELcvi8k","Gi4RXuH2hj4","jdLVqyXuU3o",
-   "8JVnSfrqj0w","rBoA9cHG8z8","RWX8NRIOf64"],
+   "8JVnSfrqj0w","rBoA9cHG8z8","RWX8NRIOf64",
+   "ruQsv709MA0"],
   //4
   ["-fz_cIXi8OY","2k4Te7jmwLY","jQmYZWjLwzw",
    "Y6ljFaKRTrI","wKCAgoV8RPg","QHwaJVLtQrM",
@@ -191,7 +192,8 @@ function mujicdate(num){
    ["Heaven's Place","Gentleman","星巡りの詩",
     "Because","The Sore Feet Song","未来予報",
     "another dawn","時空のたもと","Speedracer",
-    "Key To My Heart","VON","Opium"],
+    "Key To My Heart","VON","Opium",
+    "For the Love of Life"],
   //4
    ["paranoia","弾けないギターを片手に。","Alice in 冷凍庫",
     "'Still Alive'","HeavenZ-ArmZ","0259 in my room",
