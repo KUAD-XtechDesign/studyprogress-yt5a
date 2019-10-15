@@ -163,7 +163,7 @@ function mujicdate(num){
    "bV0D38nFUhU","BPcqAFjtM8Q","iPXxrYcg_GA",
    "UfrMELcvi8k","Gi4RXuH2hj4","jdLVqyXuU3o",
    "8JVnSfrqj0w","rBoA9cHG8z8","RWX8NRIOf64",
-   "ruQsv709MA0"],
+   "ruQsv709MA0","r0SOmcfomAk"],
   //4
   ["-fz_cIXi8OY","2k4Te7jmwLY","jQmYZWjLwzw",
    "Y6ljFaKRTrI","wKCAgoV8RPg","QHwaJVLtQrM",
@@ -193,7 +193,7 @@ function mujicdate(num){
     "Because","The Sore Feet Song","未来予報",
     "another dawn","時空のたもと","Speedracer",
     "Key To My Heart","VON","Opium",
-    "For the Love of Life"],
+    "For the Love of Life","睡眠都市"],
   //4
    ["paranoia","弾けないギターを片手に。","Alice in 冷凍庫",
     "'Still Alive'","HeavenZ-ArmZ","0259 in my room",
