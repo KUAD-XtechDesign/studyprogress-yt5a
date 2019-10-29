@@ -91,6 +91,10 @@ document.body.appendChild(unknown);
     }
    }
 
+   if (getcode.slice(0,5) == "movie") {
+     movies();
+   }
+
   //back-img
   if (getcode.slice(0,4) == "back") {
    if (getcode.slice(4,8) == "mini") {

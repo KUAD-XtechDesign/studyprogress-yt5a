@@ -149,7 +149,7 @@ function mujicdate(num){
    "uTK6FhKTIJw","6YCUjoBqpSc","jIlPjyXQPBY",
    "D2-W-qHG1ro","oBxABTpl5tQ","a-_pVXV1wsM",
    "VueJOmJe5Z8","fTyrBv8f9eo","8mP3ax-vyCA",
-   "0PW5ZrZ3JCw"],
+   "0PW5ZrZ3JCw","BmDFLw52Ikg"],
   //2
   ["1lNK9kWmUqk","x8YW7INN7Z4","RvaKJXWY4x4",
    "lBmPvWyQ-HY","JpxLaTsylBU","xIIYt5lcq3A",
@@ -179,7 +179,7 @@ function mujicdate(num){
    "for+","Heal","富士樹海",
    "Caligula","書を愛して 狂う者曰く、紙は常に我らと共に","Fatigas Del Querer",
    "FOR THE RECORD.B","虚構の地","mid night summer magic",
-   "Tractatus Logico philosophicus"],
+   "Tractatus Logico philosophicus","Re:hometown"],
   //2
   ["NeKoMaJiN vs","防来/ゾフィエル","OVERDOSE",
    "Mechanized Memories in the end","Brotherswing","Shall Never Surrender",
