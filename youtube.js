@@ -7,7 +7,7 @@ songname = s;
 mujicact = 0;
 thismode = ["Cool","Hot","Sour","Machine"]
 modecolor = ["skyblue","red","yellow","gray"]
-freeback = ["rBoA9cHG8z8","ejTgl3cCyDo","0PW5ZrZ3JCw"]
+freeback = ["rBoA9cHG8z8","ejTgl3cCyDo","0PW5ZrZ3JCw","Zdrw_e7o4zo"]
 
 function youtubestart(){
 console.log(url+","+songname)
@@ -164,7 +164,7 @@ function mujicdate(num){
    "UfrMELcvi8k","Gi4RXuH2hj4","jdLVqyXuU3o",
    "8JVnSfrqj0w","rBoA9cHG8z8","RWX8NRIOf64",
    "ruQsv709MA0","r0SOmcfomAk","pqxDUHqV5lM",
-   "FDqxY2gIcPI"],
+   "FDqxY2gIcPI","Zdrw_e7o4zo"],
   //4
   ["-fz_cIXi8OY","2k4Te7jmwLY","jQmYZWjLwzw",
    "Y6ljFaKRTrI","wKCAgoV8RPg","QHwaJVLtQrM",
@@ -195,7 +195,7 @@ function mujicdate(num){
     "another dawn","時空のたもと","Speedracer",
     "Key To My Heart","VON","Opium",
     "For the Love of Life","睡眠都市","Monochrome Re:Surgence",
-    "Strangers"],
+    "Strangers","There's No Ending"],
   //4
    ["paranoia","弾けないギターを片手に。","Alice in 冷凍庫",
     "'Still Alive'","HeavenZ-ArmZ","0259 in my room",
